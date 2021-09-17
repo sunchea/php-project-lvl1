@@ -1,0 +1,12 @@
+{
+    "name": "hexlet/code",
+    "description": "none",
+    "type": "project",
+    "authors": [
+        {
+            "name": "a.zhamkov",
+            "email": "a.zhamkov@vpene.ru"
+        }
+    ],
+    "require": {}
+}
