@@ -11,8 +11,9 @@
   "description": "none",
   "license": "MIT",
   "autoload": {
+    "files": [ "src/Cli.php" ],
     "psr-4": {
-      "Php\\MyProject\\": "vendor/wp-cli/php-cli-tools"
+      "Brain\\Games\\CliTools\\": "vendor/wp-cli/php-cli-tools"
     }
   },
   "require": {
