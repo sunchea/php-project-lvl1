@@ -43,6 +43,8 @@ function runGame(): void
 /**
  * Function even($num)
  *
+ * @param $num
+ *
  * @return bool
  */
 function even($num): bool
@@ -66,6 +68,8 @@ function welcomePrompt(): string
 
 /**
  * Function question($random)
+ *
+ * @param $random
  *
  * @return bool
  */
