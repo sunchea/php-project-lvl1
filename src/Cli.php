@@ -1,11 +1,12 @@
 <?php
 /**
  * Namespace for function welcomePrompt()
- * @category none
- * @package none
- * @author Sunchea
- * @license none
- * @link none 
+ * 
+ * @category None
+ * @package  None
+ * @author   Sunchea <sunchea.qomo@gmail.com>
+ * @license  None
+ * @link     None 
  */
 namespace Brain\Games\Cli;
 
@@ -14,6 +15,7 @@ use function cli\prompt;
 
 /**
  * Function welcomePrompt()
+ * 
  * @return void
  */
 function welcomePrompt()
