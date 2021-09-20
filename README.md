@@ -6,3 +6,6 @@
 
 ### Make lint status:
 [![Lint](https://github.com/sunchea/php-project-lvl1/actions/workflows/lint.yml/badge.svg?branch=master)](https://github.com/sunchea/php-project-lvl1/actions/workflows/lint.yml)
+
+### Asciinema link:
+https://asciinema.org/connect/0a081bdc-eafe-4703-814f-0c84ab598fc7
