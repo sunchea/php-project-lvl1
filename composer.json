@@ -1,16 +1,14 @@
 {
-    "name": "hexlet/code",
-    "description": "none",
-    "type": "project",
-    "license": "proprietary",
-    "authors": [
+  "name": "hexlet/code",
+  "bin": ["bin/brain-games"],
+  "type": "project",
+  "authors": [
         {
-            "name": "a.zhamkov",
-            "email": "a.zhamkov@vpene.ru"
+            "name": "sunchea",
+            "email": "sunchea.qomo@gmail.com"
         }
-    ],
-    "bin": [
-	"bin/brain-games"
-    ],
-    "require": {}
+  ],
+  "description": "none",
+  "license": "MIT",
+  "require": {}
 }
