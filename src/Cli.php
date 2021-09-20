@@ -5,8 +5,8 @@
  * @category None
  * @package  None
  * @author   Sunchea <sunchea.qomo@gmail.com>
- * @license  None
- * @link     None 
+ * @license  http://www.php.net/license/3_01.txt  PHP License 3.01
+ * @link     None
  */
 namespace Brain\Games\Cli;
 
