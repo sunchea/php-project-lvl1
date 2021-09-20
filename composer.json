@@ -2,11 +2,15 @@
     "name": "hexlet/code",
     "description": "none",
     "type": "project",
+    "license": "proprietary",
     "authors": [
         {
             "name": "a.zhamkov",
             "email": "a.zhamkov@vpene.ru"
         }
+    ],
+    "bin": [
+	"bin/brain-games"
     ],
     "require": {}
 }
