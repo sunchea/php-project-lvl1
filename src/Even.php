@@ -43,11 +43,11 @@ function runGame(): void
 /**
  * Function even($num)
  *
- * @param $num
+ * @param int $num check number
  *
  * @return bool
  */
-function even($num): bool
+function even(int $num): bool
 {
     return ($num % 2 === 0) ? true : false;
 }
@@ -69,11 +69,11 @@ function welcomePrompt(): string
 /**
  * Function question($random)
  *
- * @param $random
+ * @param int $random random number
  *
  * @return bool
  */
-function question($random): bool
+function question(int $random): bool
 {
     line('Answer "yes" if the number is even, otherwise answer "no".');
     line("Question: %s", $random);
