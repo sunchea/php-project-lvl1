@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Namespace for function welcomePrompt()
+ * Namespace for Brain\Games\Even
  *
  * @category None
  * @package  None

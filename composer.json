@@ -2,7 +2,8 @@
   "name": "hexlet/code",
   "bin": [
     "bin/brain-games",
-    "bin/brain-even"
+    "bin/brain-even",
+    "bin/brain-calc"
   ],
   "type": "project",
   "authors": [
@@ -16,7 +17,9 @@
   "autoload": {
     "files": [
       "src/Cli.php",
-      "src/Even.php"
+      "src/Games/Even.php",
+      "src/Games/Calc.php",
+      "src/Engine.php"
     ],
     "psr-4": {
       "Brain\\Games\\CliTools\\": "vendor/wp-cli/php-cli-tools"
