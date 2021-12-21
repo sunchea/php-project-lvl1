@@ -23,7 +23,9 @@ use function cli\out;
  */
 function runGame(): void
 {
+    line('');
     $name = welcomePrompt();
+    line('Answer "yes" if the number is even, otherwise answer "no".');
 
     $count = 0;
     do {
@@ -60,7 +62,7 @@ function even(int $num): bool
 function welcomePrompt(): string
 {
     line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name?');
+    $name = prompt('May I have your name', false, '? ', false);
     line("Hello, %s!", $name);
 
     return $name;
@@ -75,7 +77,6 @@ function welcomePrompt(): string
  */
 function question(int $random): bool
 {
-    line('Answer "yes" if the number is even, otherwise answer "no".');
     line("Question: %s", $random);
     $answer = prompt('Your answer');
 
