@@ -7,5 +7,8 @@
 ### Make lint status:
 [![Lint](https://github.com/sunchea/php-project-lvl1/actions/workflows/lint.yml/badge.svg?branch=master)](https://github.com/sunchea/php-project-lvl1/actions/workflows/lint.yml)
 
-### Asciinema link:
+### Asciinema link to brain-even:
 https://asciinema.org/a/zraxuL9Zd6oOtaBJIIBfPLSrD
+
+### Asciinema link to brain-calc:
+https://asciinema.org/a/kr7n7IUoyXmhimoNPOm0zfk3r
