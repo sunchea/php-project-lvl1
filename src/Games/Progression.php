@@ -15,6 +15,7 @@ namespace Brain\Games\Progression;
 use function cli\line;
 use function cli\prompt;
 use function cli\out;
+use function Brain\Games\Engine\welcomePrompt;
 
 /**
  * Function runGame()
@@ -66,32 +67,6 @@ function runGame(): void
     if ($isCorrectAnswer) {
         line("Congratulations, %s!", $name);
     }
-}
-
-/**
- * Function even($num)
- *
- * @param int $num check number
- *
- * @return bool
- */
-function even(int $num): bool
-{
-    return ($num % 2 === 0) ? true : false;
-}
-
-/**
- * Function welcomePrompt()
- *
- * @return $name
- */
-function welcomePrompt(): string
-{
-    line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name', false, '? ', false);
-    line("Hello, %s!", $name);
-
-    return $name;
 }
 
 /**

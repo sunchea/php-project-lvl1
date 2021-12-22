@@ -14,13 +14,17 @@ namespace Brain\Games\Engine;
 
 use function cli\line;
 use function cli\prompt;
-use function cli\out;
 
 /**
- * Function runGame()
+ * Function welcomePrompt()
  *
- * @return void
+ * @return $name
  */
-function runGame(): void
+function welcomePrompt(): string
 {
+    line('Welcome to the Brain Games!');
+    $name = prompt('May I have your name', false, '? ', false);
+    line("Hello, %s!", $name);
+
+    return $name;
 }

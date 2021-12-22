@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Namespace for Brain\Games\Gcd
+ * Namespace for Brain\Games\Prime
  *
  * @category None
  * @package  None
@@ -10,7 +10,7 @@
  * @link     None
  */
 
-namespace Brain\Games\Gcd;
+namespace Brain\Games\Prime;
 
 use function cli\line;
 use function cli\prompt;
@@ -26,17 +26,14 @@ function runGame(): void
 {
     line('');
     $name = welcomePrompt();
-    line('Find the greatest common divisor of given numbers.');
+    line('Answer "yes" if given number is prime. Otherwise answer "no".');
 
     $count = 0;
     do {
-        $randomX = rand(1, 100);
-        $randomY = rand(1, 100);
+        $strQuestion = rand(1, 101);
+        $resQuestion = isPrime($strQuestion);
 
-        $strQuestion = "{$randomX} {$randomY}";
-        $resQuestion = gmp_gcd($randomX, $randomY);
-
-        $isCorrectAnswer = question($strQuestion, gmp_strval($resQuestion));
+        $isCorrectAnswer = question($strQuestion, $resQuestion);
         if (!$isCorrectAnswer) {
             line("Let's try again, %s!", $name);
         }
@@ -49,25 +46,52 @@ function runGame(): void
 }
 
 /**
- * Function question($strQuestion, $resQuestion)
+ * Function isPrime($num)
  *
- * @param string $strQuestion show string
- * @param string $resQuestion check string
+ * @param int $num check number
  *
  * @return bool
  */
-function question(string $strQuestion, string $resQuestion): bool
+function isPrime($num)
+{
+    if ($num === 1) {
+        return false;
+    }
+
+    for ($i = 2; $i <= $num / 2; $i += 1) {
+        if ($num % $i === 0) {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+/**
+ * Function question($strQuestion, $resQuestion)
+ *
+ * @param string $strQuestion show string
+ * @param bool   $resQuestion check bool
+ *
+ * @return bool
+ */
+function question(string $strQuestion, bool $resQuestion): bool
 {
     line("Question: %s", $strQuestion);
     $answer = prompt('Your answer');
 
-    if (intval($answer) === intval($resQuestion)) {
+    if ($answer === "yes" && $resQuestion) {
+        line("Correct!");
+        return true;
+    }
+
+    if ($answer === "no" && !$resQuestion) {
         line("Correct!");
         return true;
     }
 
     out("'%s' is wrong answer ;(. ", $answer);
-    line("Correct answer was '%d'.", $resQuestion);
+    line("Correct answer was '%s'.", $resQuestion ? 'yes' : 'no');
 
     return false;
 }
