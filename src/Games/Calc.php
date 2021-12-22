@@ -34,15 +34,15 @@ function runGame(): void
         $randomY = rand(1, $randomX);
         $randomOperation = rand(1, 3);
         switch ($randomOperation) {
-            case 1:
+        case 1:
                 $strQuestion = "{$randomX} + {$randomY}";
                 $resQuestion = $randomX + $randomY;
                 break;
-            case 2:
+        case 2:
                 $strQuestion = "{$randomX} - {$randomY}";
                 $resQuestion = $randomX - $randomY;
                 break;
-            case 3:
+        case 3:
                 $strQuestion = "{$randomX} * {$randomY}";
                 $resQuestion = $randomX * $randomY;
                 break;
