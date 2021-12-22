@@ -36,7 +36,7 @@ function runGame(): void
         $strQuestion = "{$randomX} {$randomY}";
         $resQuestion = gmp_gcd($randomX, $randomY);
 
-        $isCorrectAnswer = question($strQuestion, gmp_strval($resQuestion));
+        $isCorrectAnswer = question($strQuestion, $resQuestion);
         if (!$isCorrectAnswer) {
             line("Let's try again, %s!", $name);
         }
@@ -46,6 +46,19 @@ function runGame(): void
     if ($isCorrectAnswer) {
         line("Congratulations, %s!", $name);
     }
+}
+
+/**
+ * Function gcd($a, $b)
+ *
+ * @param int $a check number
+ * @param int $b check number
+ *
+ * @return int
+ */
+function gcd(int $a, int $b): int
+{
+    return ($a % $b) ? gcd($b, $a % $b) : $b;
 }
 
 /**
