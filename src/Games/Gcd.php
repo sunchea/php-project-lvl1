@@ -34,7 +34,7 @@ function runGame(): void
         $randomY = rand(1, 100);
 
         $strQuestion = "{$randomX} {$randomY}";
-        $resQuestion = gmp_gcd($randomX, $randomY);
+        $resQuestion = gcd($randomX, $randomY);
 
         $isCorrectAnswer = question($strQuestion, $resQuestion);
         if (!$isCorrectAnswer) {
