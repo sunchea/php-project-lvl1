@@ -31,7 +31,7 @@ function runGame(): void
     $count = 0;
     do {
         $randomResult = [];
-        $resQuestion = '';
+        $resQuestion = 0;
 
         $randomStart = rand(1, 9);
         $randomStep = rand(2, 7);

@@ -30,10 +30,10 @@ function runGame(): void
 
     $count = 0;
     do {
-        $strQuestion = strval(rand(1, 101));
+        $strQuestion = rand(1, 101);
         $resQuestion = isPrime($strQuestion);
 
-        $isCorrectAnswer = question($strQuestion, $resQuestion);
+        $isCorrectAnswer = question(strval($strQuestion), $resQuestion);
         if (!$isCorrectAnswer) {
             line("Let's try again, %s!", $name);
         }
