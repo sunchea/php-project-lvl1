@@ -32,17 +32,25 @@ function runGame(): void
         $randomResult = [];
 
         $randomStart = rand(1, 9);
-        $randomStep = rand(1, 5);
-        $randomStop = rand(9, 10);
-        $randomPosition = rand(1, $randomStop);
-        $randomResult[] = $randomStart;
+        $randomStep = rand(2, 7);
+        $randomStop = rand(8, 10);
+        $randomPosition = rand(0, $randomStop - 1);
+
+        $randomSalt = rand(1, 3);
+
+        if ($randomPosition !== 0) {
+            $randomResult[] = $randomStart + $randomSalt;
+        } elseif ($randomPosition === 0) {
+            $randomResult[] = '..';
+            $resQuestion = $randomStart + $randomSalt;
+        }
 
         for ($i = 1; $i < $randomStop; $i += 1) {
             if ($i !== $randomPosition) {
-                $randomResult[] = $randomStart + $i * $randomStep;
+                $randomResult[] = $randomStart + $i * $randomStep + $randomSalt;
             } elseif ($i === $randomPosition) {
                 $randomResult[] = '..';
-                $resQuestion = $randomStart + $i * $randomStep;
+                $resQuestion = $randomStart + $i * $randomStep + $randomSalt;
             }
         }
 
