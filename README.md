@@ -18,3 +18,6 @@ https://asciinema.org/a/KEea3FDom7Zl1oGS7zHfas75T
 
 ### Asciinema link to brain-progression:
 https://asciinema.org/a/NvimvVIz9ACoJJcYMWfqZrLA6
+
+### Asciinema link to brain-prime:
+https://asciinema.org/a/9eEnI9d2smqaR22Kf3h8QUfZ9
