@@ -33,6 +33,8 @@ function runGame(): void
         $randomX = rand(1, 25);
         $randomY = rand(1, $randomX);
         $randomOperation = rand(1, 3);
+        $strQuestion = '';
+        $resQuestion = 0;
         switch ($randomOperation) {
             case 1:
                 $strQuestion = "{$randomX} + {$randomY}";

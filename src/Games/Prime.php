@@ -30,7 +30,7 @@ function runGame(): void
 
     $count = 0;
     do {
-        $strQuestion = rand(1, 101);
+        $strQuestion = strval(rand(1, 101));
         $resQuestion = isPrime($strQuestion);
 
         $isCorrectAnswer = question($strQuestion, $resQuestion);

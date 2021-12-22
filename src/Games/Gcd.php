@@ -58,23 +58,27 @@ function runGame(): void
  */
 function gcd(int $a, int $b): int
 {
-    return ($a % $b) ? gcd($b, $a % $b) : $b;
+    if ($a % $b !== 0) {
+        return gcd($b, $a % $b);
+    }
+
+    return $b;
 }
 
 /**
  * Function question($strQuestion, $resQuestion)
  *
  * @param string $strQuestion show string
- * @param string $resQuestion check string
+ * @param int    $resQuestion check number
  *
  * @return bool
  */
-function question(string $strQuestion, string $resQuestion): bool
+function question(string $strQuestion, int $resQuestion): bool
 {
     line("Question: %s", $strQuestion);
     $answer = prompt('Your answer');
 
-    if (intval($answer) === intval($resQuestion)) {
+    if (intval($answer) === $resQuestion) {
         line("Correct!");
         return true;
     }

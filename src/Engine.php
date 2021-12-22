@@ -18,12 +18,12 @@ use function cli\prompt;
 /**
  * Function welcomePrompt()
  *
- * @return $name
+ * @return string
  */
 function welcomePrompt(): string
 {
     line('Welcome to the Brain Games!');
-    $name = prompt('May I have your name', false, '? ', false);
+    $name = prompt('May I have your name', '', '? ', false);
     line("Hello, %s!", $name);
 
     return $name;

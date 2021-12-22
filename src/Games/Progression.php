@@ -31,6 +31,7 @@ function runGame(): void
     $count = 0;
     do {
         $randomResult = [];
+        $resQuestion = '';
 
         $randomStart = rand(1, 9);
         $randomStep = rand(2, 7);
@@ -39,17 +40,17 @@ function runGame(): void
 
         $randomSalt = rand(1, 3);
 
-        if ($randomPosition !== 0) {
+        if ($randomPosition != 0) {
             $randomResult[] = $randomStart + $randomSalt;
-        } elseif ($randomPosition === 0) {
+        } elseif ($randomPosition == 0) {
             $randomResult[] = '..';
             $resQuestion = $randomStart + $randomSalt;
         }
 
         for ($i = 1; $i < $randomStop; $i += 1) {
-            if ($i !== $randomPosition) {
+            if ($i != $randomPosition) {
                 $randomResult[] = $randomStart + $i * $randomStep + $randomSalt;
-            } elseif ($i === $randomPosition) {
+            } elseif ($i == $randomPosition) {
                 $randomResult[] = '..';
                 $resQuestion = $randomStart + $i * $randomStep + $randomSalt;
             }
