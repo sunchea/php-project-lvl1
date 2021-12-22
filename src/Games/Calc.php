@@ -37,15 +37,15 @@ function runGame(): void
             case 1:
                 $strQuestion = "{$randomX} + {$randomY}";
                 $resQuestion = $randomX + $randomY;
-            break;
+                break;
             case 2:
                 $strQuestion = "{$randomX} - {$randomY}";
                 $resQuestion = $randomX - $randomY;
-            break;
+                break;
             case 3:
                 $strQuestion = "{$randomX} * {$randomY}";
                 $resQuestion = $randomX * $randomY;
-            break;
+                break;
         }
         $isCorrectAnswer = question($strQuestion, $resQuestion);
         if (!$isCorrectAnswer) {
